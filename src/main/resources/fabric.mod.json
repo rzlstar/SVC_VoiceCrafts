@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "voicechanger",
+	"version": "${version}",
+	"name": "Simple Voice Changer",
+	"description": "Simple Voice Chat 用のボイスチェンジャーアドオン。ピッチ・エコー・音質・音量をスライダーで調整できます。",
+	"authors": [
+		"You"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"com.example.voicechanger.VoiceChangerMod"
+		],
+		"client": [
+			"com.example.voicechanger.client.VoiceChangerClient"
+		],
+		"voicechat": [
+			"com.example.voicechanger.voicechat.VoiceChangerPlugin"
+		],
+		"modmenu": [
+			"com.example.voicechanger.client.ModMenuIntegration"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"voicechat_api": ">=2.6.24"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}
